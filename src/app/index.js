@@ -4,7 +4,7 @@ import {routing, RootComponent} from './routes';
 
 import {TechsModule} from './techs';
 
-import {MainComponent, WorkExperience, Education} from './main';
+import {MainComponent} from './main';
 import {HeaderComponent} from './header';
 import {TitleComponent} from './title';
 import {FooterComponent} from './footer';
@@ -20,9 +20,7 @@ import {FooterComponent} from './footer';
     MainComponent,
     HeaderComponent,
     TitleComponent,
-    FooterComponent,
-    WorkExperience,
-    Education
+    FooterComponent
   ],
   bootstrap: [RootComponent]
 })
