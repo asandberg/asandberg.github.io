@@ -31,7 +31,7 @@ a {
 .header {
   display: flex;
   align-items: center;
-  background-color: #1f1f1f;
+  background-color: #3c3370;
 }
 .header-title {
   flex: 1;
@@ -50,7 +50,7 @@ a {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  background-color: #cf4646;
+  background-color: #337036;
   color: white;
 }
 .title-h1 {
@@ -109,4 +109,22 @@ a {
 .tech-h3 {
   font-size: 1.5rem;
   margin: 0 0 2rem 0;
+}
+
+.tech-skill {
+  margin: 0 1em 0.3em 0 ;
+  background-color: #e5e5e5;
+  padding: 0.4em;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.language span:first-child {
+  width: 10em;
+  display: inline-block;
+}
+
+#content {
+  width: 80%;
+  margin: auto;
 }

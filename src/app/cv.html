@@ -1,0 +1,30 @@
+<div class="main-container">
+  <fountain-header></fountain-header>
+  <main class="main">
+    <fountain-title></fountain-title>
+    <div id="content">
+      <h3>Work experience</h3>
+      <div *ngFor="let experience of workExperience">
+        <strong>{{experience.name}}</strong>
+        <p>{{experience.time}}</p>
+        <p [innerHTML]="experience.desc"></p>
+      </div>
+      <h3>Education</h3>
+      <div *ngFor="let edu of education">
+        <strong>{{edu.name}}</strong>
+        <p>{{edu.school}}</p>
+        <p>{{edu.time}}</p>
+        <p [innerHTML]="edu.desc"></p>
+      </div>
+      <h3>Technology skills</h3>
+      <span class="tech-skill" *ngFor="let skill of techSkills">{{skill}}</span>
+
+      <h3>Languages</h3>
+      <p class="language" *ngFor="let language of languages">
+        <span>{{language.language}}</span>
+        <span>{{language.level}}</span>
+      </p>
+    </div>
+  </main>
+  <fountain-footer></fountain-footer>
+</div>

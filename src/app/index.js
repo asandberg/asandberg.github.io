@@ -8,6 +8,7 @@ import {MainComponent} from './main';
 import {HeaderComponent} from './header';
 import {TitleComponent} from './title';
 import {FooterComponent} from './footer';
+import {CVComponent} from './cv';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import {FooterComponent} from './footer';
     MainComponent,
     HeaderComponent,
     TitleComponent,
-    FooterComponent
+    FooterComponent,
+    CVComponent
   ],
   bootstrap: [RootComponent]
 })

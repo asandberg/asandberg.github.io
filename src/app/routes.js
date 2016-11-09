@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {MainComponent} from './main';
+import {CVComponent} from './cv';
 
 @Component({
   selector: 'fountain-root',
@@ -12,6 +13,10 @@ export const routes = [
   {
     path: '',
     component: MainComponent
+  },
+  {
+    path: 'cv',
+    component: CVComponent
   }
 ];
 
