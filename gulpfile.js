@@ -21,8 +21,8 @@ gulp.task('watch', watch);
 
 gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
-  .pipe(ghPages({ branch: 'master' }));
-});
+  .pipe(ghPages());
+})
 
 function reloadBrowserSync(cb) {
   browserSync.reload();
