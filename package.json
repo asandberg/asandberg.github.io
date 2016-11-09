@@ -73,7 +73,8 @@
     ],
     "rules": {
       "new-cap": 0,
-      "linebreak-style": ["error", "windows"]
+      "linebreak-style": ["error", "windows"],
+      "no-unused-vars": ["error", { "vars": "local" }]
     }
   }
 }

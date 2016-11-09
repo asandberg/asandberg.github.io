@@ -17,13 +17,16 @@
         <p [innerHTML]="edu.desc"></p>
       </div>
       <h3>Technology skills</h3>
-      <span class="tech-skill" *ngFor="let skill of techSkills">{{skill}}</span>
+      <span class="tech-skill" *ngFor="let skill of techSkills">{{skill}} </span>
 
       <h3>Languages</h3>
       <p class="language" *ngFor="let language of languages">
         <span>{{language.language}}</span>
         <span>{{language.level}}</span>
       </p>
+
+      <h3>Other</h3>
+      <p>I participated in Taitaja, the National Finnish Skills Competition, in 2011 and 2012, placing the fifth and the second place in the Web Design competition.</p>
     </div>
   </main>
   <fountain-footer></fountain-footer>

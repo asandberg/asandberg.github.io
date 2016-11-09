@@ -9,6 +9,7 @@ import {HeaderComponent} from './header';
 import {TitleComponent} from './title';
 import {FooterComponent} from './footer';
 import {CVComponent} from './cv';
+import {PortfolioComponent} from './portfolio';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import {CVComponent} from './cv';
     HeaderComponent,
     TitleComponent,
     FooterComponent,
-    CVComponent
+    CVComponent,
+    PortfolioComponent
   ],
   bootstrap: [RootComponent]
 })

@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
 import {RouterModule} from '@angular/router';
-import {MainComponent} from './main';
 import {CVComponent} from './cv';
+import {PortfolioComponent} from './portfolio';
 
 @Component({
-  selector: 'fountain-root',
+  selector: 'sandberg-root',
   template: '<router-outlet></router-outlet>'
 })
 export class RootComponent {}
@@ -12,7 +12,7 @@ export class RootComponent {}
 export const routes = [
   {
     path: '',
-    component: MainComponent
+    component: PortfolioComponent
   },
   {
     path: 'cv',

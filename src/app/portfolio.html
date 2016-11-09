@@ -1,0 +1,13 @@
+<div class="main-container">
+  <fountain-header></fountain-header>
+  <main class="main">
+    <fountain-title></fountain-title>
+    <div id="content">
+      <div *ngFor="let item of portfolio" style="text-align: center;">
+        <img width="880" height="480" style="margin:auto" [src]="item.img">
+        <h3>{{item.name}}</h3>
+      </div>
+    </div>
+  </main>
+  <fountain-footer></fountain-footer>
+</div>
