@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const HubRegistry = require('gulp-hub');
 const browserSync = require('browser-sync');
 const ghPages = require('gulp-gh-pages');
+const gulpReplace = require('gulp-replace');
 
 const conf = require('./conf/gulp.conf');
 
@@ -20,9 +21,15 @@ gulp.task('default', gulp.series('clean', 'build'));
 gulp.task('watch', watch);
 
 gulp.task('deploy', function() {
-  return gulp.src('./dist/**/*')
+  return gulp.src([
+    './dist/**/*',
+    '.nojekyll',
+    'CNAME'
+  ])
+  .pipe(gulpReplace('/img/', '/src/img/'))
   .pipe(ghPages({ branch: 'master', force: true }));
-})
+});
+
 
 function reloadBrowserSync(cb) {
   browserSync.reload();

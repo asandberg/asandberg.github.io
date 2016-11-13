@@ -8,19 +8,19 @@ export class PortfolioComponent {
   constructor() {
     this.portfolio = [
       {
-        img: "app/img/frozenforce.png",
+        img: "/img/frozenforce.png",
         name: "Frozen Force"
       },
       {
-        img: "app/img/artifact.png",
+        img: "/img/artifact.png",
         name: "Artifact"
       },
       {
-        img: "app/img/sitefolk.png",
+        img: "/img/sitefolk.png",
         name: "Site Folk"
       },
       {
-        img: "app/img/imagemapper.png",
+        img: "/img/imagemapper.png",
         name: "Imagemapper"
       }
     ];

@@ -5,7 +5,7 @@ import {PortfolioComponent} from './portfolio';
 
 @Component({
   selector: 'sandberg-root',
-  template: '<router-outlet></router-outlet>'
+  template: require('./base.html')
 })
 export class RootComponent {}
 
