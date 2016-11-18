@@ -1,15 +1,7 @@
-<div class="main-container">
-  <main class="main">
-    <div id="sidebar">
-      <img src="/img/self.png" id="profile">
-      <h2>Hello!</h2>
-      <p>I'm Antti Sandberg, a game developer, web designer, </p>
-    </div>
-    <div id="content">
-      <div *ngFor="let item of portfolio" style="text-align: center;">
-        <img width="880" height="480" style="margin:auto" [src]="item.img">
-        <h3>{{item.name}}</h3>
-      </div>
-    </div>
-  </main>
+<div id="portfolio">
+  <div *ngFor="let item of portfolio" class="portfolio-item">
+    <img [src]="item.img">
+    <h2>{{item.name}}</h2>
+    <p>{{item.description}}
+  </div>
 </div>

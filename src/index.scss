@@ -1,3 +1,7 @@
+
+$headerColor: #0f1f39;
+$sidebarColor: #2c4582;
+
 html, body, #root {
   margin: 0;
   height: 100%;
@@ -26,12 +30,19 @@ a {
   flex: 1;
   display: flex;
   flex-direction: row;
+  min-height: 100%;
 }
 
 .header {
   display: flex;
   align-items: center;
-  background-color: #3c3370;
+  background-color: $headerColor;
+  justify-content: flex-end;
+
+  a {
+    display: block;
+    margin: 0.5em 1em;
+  }
 }
 .header-title {
   flex: 1;
@@ -78,47 +89,6 @@ a {
   color: white;
 }
 
-.techs-container {
-  margin: 1rem;
-}
-.techs-h2 {
-  font-weight: 300;
-  font-size: 1.5rem;
-}
-.techs {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.tech {
-  height: 15rem;
-  width: 15rem;
-  border: 1px solid lightgray;
-  border-radius: 1rem;
-  margin: 1rem;
-  padding: 1rem;
-}
-.tech-logo {
-  width: 5rem;
-  height: 5rem;
-  float: right;
-  margin: 0 0 .5rem .5rem;
-}
-.tech-h3 {
-  font-size: 1.5rem;
-  margin: 0 0 2rem 0;
-}
-
-.tech-skill {
-  margin: 0 1em 0.3em 0 ;
-  background-color: #e5e5e5;
-  padding: 0.4em;
-  border-radius: 4px;
-  display: inline-block;
-}
-
 .language span:first-child {
   width: 10em;
   display: inline-block;
@@ -127,18 +97,62 @@ a {
 #sidebar {
   order: 1;
   width: 20%;
+  padding: 2em;
+  box-sizing: border-box;
 
   img {
-    width: 80%;
-    margin: 5% 10%;
+    width: 100%;
   }
 
   h1, h2, h3, h4, p {
-    margin: 5% 10%;
+    margin: 5% 0%;
   }
+  color: white;
+  background-color: $sidebarColor;
 }
 
 #content {
   width: 80%;
   order: 2;
+  padding: 25px;
+  min-height: 100%;
+
+  p, h3 {
+    max-width: 700px;
+  }
+
+  h3 {
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(150,150,150);
+  }
+}
+
+#portfolio {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#about {
+  p {
+    max-width: 700px;
+  }
+}
+
+.portfolio-item {
+  width: 40%;
+  flex-grow: 1;
+  padding: 30px;
+  display: inline-block;
+  img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 850px) {
+  #sidebar {
+    display: none;
+  }
+  #content {
+    width: 100%;
+  }
 }

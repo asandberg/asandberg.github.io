@@ -20,16 +20,27 @@ gulp.task('serve:dist', gulp.series('default', 'browsersync:dist'));
 gulp.task('default', gulp.series('clean', 'build'));
 gulp.task('watch', watch);
 
+
+gulp.task('pathfix', function() {
+    console.log("Pathfix");
+    return gulp.src([
+      './dist/**/*.js',
+      './dist/**/*.html'
+    ])
+    .pipe(gulpReplace('"/img/', '"/src/img/'))
+    .pipe(gulp.dest('./dist/'));
+});
+
 gulp.task('deploy', function() {
   return gulp.src([
     './dist/**/*',
     '.nojekyll',
     'CNAME'
   ])
-  .pipe(gulpReplace('/img/', '/src/img/'))
   .pipe(ghPages({ branch: 'master', force: true }));
 });
 
+gulp.task('github', gulp.series('pathfix', 'deploy'));
 
 function reloadBrowserSync(cb) {
   browserSync.reload();
