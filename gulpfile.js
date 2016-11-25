@@ -28,6 +28,7 @@ gulp.task('pathfix', function() {
       './dist/**/*.html'
     ])
     .pipe(gulpReplace('"/img/', '"/src/img/'))
+    .pipe(gulpReplace('(/img/', '(/src/img/'))
     .pipe(gulp.dest('./dist/'));
 });
 
