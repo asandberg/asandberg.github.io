@@ -11,7 +11,7 @@ export class PortfolioComponent {
       {
         img: "/img/frozenforce.png",
         name: "Frozen Force",
-        description: "A website for a group of friends I've played different type of games with."
+        description: "A website for a group I'm part of. "
       },
       {
         img: "/img/artifact.png",
