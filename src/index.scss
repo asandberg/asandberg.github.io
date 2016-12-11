@@ -5,14 +5,35 @@ $sidebarColor: #2c4582;
 html, body, #root {
   margin: 0;
   height: 100%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Josefin sans', sans-serif;
+  font-size: 100%;
 }
 
+
 body, h1, h2, h3 {
-  font-weight: 300
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.2em;
 }
 
 a {
+  text-decoration: none;
+  color: #1f83c6;
+}
+
+header a {
   color: white;
   text-decoration: none;
 
@@ -30,12 +51,12 @@ a {
   flex: 1;
   display: flex;
   flex-direction: row;
-  min-height: 100%;
+  background: #d0dbf3;
 }
 
 #title {
   width: 100%;
-  height: 300px;
+  height: 250px;
   text-align: center;
 //  background-image: url("img/mountains.png");
   background-size: contain;
@@ -50,18 +71,18 @@ a {
     text-align: center;
     font-family: Calibri;
     font-weight: 400;
-    text-shadow: 1px 1px #000000;
+    text-shadow: 1px 1px 0 #000000;
     text-transform: uppercase;
   }
 
   h1 {
-    top: 40px;
+    top: 70px;
     font-size: 4em;
     letter-spacing: 0.3em;
   }
 
   h2 {
-    top: 120px;
+    top: 150px;
     font-size: 1.5em;
     letter-spacing: 0.3em;
   }
@@ -152,9 +173,11 @@ a {
   padding: 25px;
   min-height: 100%;
   color: hsl(0, 0%, 30%);
+  background: #fff;
+  max-width: 1200px;
 
 
-  h3 {
+  h2.underlined {
     padding-bottom: 5px;
     border-bottom: 1px solid rgb(150,150,150);
   }
@@ -176,12 +199,13 @@ a {
 }
 
 #profile-pic {
-  
+
 }
 
 #portfolio {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 #about {
@@ -193,11 +217,81 @@ a {
 .portfolio-item {
   width: 40%;
   flex-grow: 1;
-  padding: 30px;
+  margin: 30px;
   display: inline-block;
+  position: relative;
+  overflow: hidden;
+
   img {
     width: 100%;
+    //box-shadow: 3px 3px 4px #999;
+    display: block;
   }
+
+  h2 {
+    font-weight: lighter;
+    color: #fafafa;
+    margin: 0;
+  }
+
+  .description {
+
+      position: absolute;
+      width: 100%;
+      padding: 1em;
+      box-sizing: border-box;
+      bottom: -100%;
+      background-color: hsla(0, 0%, 0%, 0.7);
+      margin: 0;
+
+      transition: bottom 0.8s;
+  }
+
+  p {
+    color: white;
+    margin-bottom: 0;
+  }
+
+  &:hover > .description {
+    bottom: 0;
+  }
+}
+
+#profile-circle {
+  width: 200px;
+  height: 200px;
+  //border-radius: 100px;
+  background-position: 0px 0px;
+  background-size: 100%;
+  //box-shadow: inset 2px 2px 3px 5px hsla(0,0%,0%,0.5);
+  margin: auto;
+  margin-top: 20px;
+  display: block;
+}
+
+#site-intro {
+  h2, p {
+    text-align: center;
+  }
+  p {
+    font-size: 110%;
+  }
+}
+
+.cv-item {
+  display: flex;
+  margin-bottom: 20px;
+
+  div:first-child {
+    align-self: center;
+  }
+}
+
+.cv-image {
+  float: left;
+  width: 100px;
+  max-height: 100px;
+  margin: 0 20px;
 }
 
 @media (max-width: 850px) {

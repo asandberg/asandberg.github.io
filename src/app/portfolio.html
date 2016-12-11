@@ -1,7 +1,18 @@
+<div id="site-intro">
+  <h2>Welcome to my portfolio</h2>
+  <p>Here are some of my recent work.</p>
+</div>
+
+<!--<div id="profile-circle" style="background-image: url(/img/self.png)"></div>
+
+<h2>Portfolio</h2>-->
 <div id="portfolio">
   <div *ngFor="let item of portfolio" class="portfolio-item">
-    <img [src]="item.img">
-    <h2>{{item.name}}</h2>
-    <p>{{item.description}}
+    <a *ngIf="item.link != null" [href]="item.link"><img [src]="item.img"></a>
+    <a *ngIf="item.routerLink != null" routerLink="{{item.routerLink}}"><img [src]="item.img"></a>
+    <div class="description">
+      <h2>{{item.name}}</h2>
+      <p>{{item.description}}</p>
+    </div>
   </div>
 </div>

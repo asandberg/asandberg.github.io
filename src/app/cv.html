@@ -1,24 +1,32 @@
-<h3>Work experience</h3>
-<div *ngFor="let experience of workExperience">
-  <strong>{{experience.name}}</strong>
-  <p>{{experience.time}}</p>
-  <p [innerHTML]="experience.desc"></p>
-</div>
-<h3>Education</h3>
-<div *ngFor="let edu of education">
-  <strong>{{edu.name}}</strong>
-  <p>{{edu.school}}</p>
-  <p>{{edu.time}}</p>
-  <p [innerHTML]="edu.desc"></p>
-</div>
-<h3>Technology skills</h3>
-<p><span class="tech-skill" *ngFor="let skill of techSkills">{{skill}} </span></p>
+<div id="cv" class="text-wrap">
+  <h2 class="underlined">Work experience</h2>
+  <div *ngFor="let experience of workExperience" class="cv-item">
+    <div><img [src]="experience.img" class="cv-image"/></div>
+    <div>
+      <h3>{{experience.name}}</h3>
+      <p>{{experience.time}}</p>
+      <p [innerHTML]="experience.desc"></p>
+    </div>
+  </div>
+  <h2 class="underlined">Education</h2>
+  <div *ngFor="let edu of education" class="cv-item">
+    <div><img [src]="edu.img" class="cv-image"/></div>
+    <div>
+      <h3>{{edu.name}}</h3>
+      <p>{{edu.school}}</p>
+      <p>{{edu.time}}</p>
+      <p [innerHTML]="edu.desc"></p>
+    </div>
+  </div>
+  <h2 class="underlined">Technology skills</h2>
+  <p><span class="tech-skill" *ngFor="let skill of techSkills">{{skill}} </span></p>
 
-<h3>Languages</h3>
-<p class="language" *ngFor="let language of languages">
-  <span>{{language.language}}</span>
-  <span>{{language.level}}</span>
-</p>
+  <h2 class="underlined">Languages</h2>
+  <p class="language" *ngFor="let language of languages">
+    <span>{{language.language}}</span>
+    <span>{{language.level}}</span>
+  </p>
 
-<h3>Other</h3>
-<p>I participated in Taitaja, the National Finnish Skills Competition, in 2011 and 2012, placing the fifth and the second place in the Web Design competition.</p>
+  <h2 class="underlined">Other</h2>
+  <p>I participated in Taitaja, the National Finnish Skills Competition, in 2011 and 2012, placing the fifth and the second place in the Web Design competition.</p>
+</div>

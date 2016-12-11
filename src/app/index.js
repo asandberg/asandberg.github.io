@@ -9,6 +9,8 @@ import {FooterComponent} from './footer';
 import {CVComponent} from './cv';
 import {AboutMeComponent} from './about';
 import {PortfolioComponent} from './portfolio';
+import {ArtifactComponent} from './pages/artifact';
+import {SitefolkComponent} from './pages/sitefolk';
 
 @NgModule({
   imports: [
@@ -23,7 +25,9 @@ import {PortfolioComponent} from './portfolio';
     FooterComponent,
     CVComponent,
     PortfolioComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    ArtifactComponent,
+    SitefolkComponent
   ],
   bootstrap: [RootComponent]
 })

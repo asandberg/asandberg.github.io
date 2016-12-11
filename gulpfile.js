@@ -41,7 +41,7 @@ gulp.task('deploy', function() {
   .pipe(ghPages({ branch: 'master', force: true }));
 });
 
-gulp.task('github', gulp.series('pathfix', 'deploy'));
+gulp.task('web', gulp.series('build', 'pathfix', 'deploy'));
 
 function reloadBrowserSync(cb) {
   browserSync.reload();
