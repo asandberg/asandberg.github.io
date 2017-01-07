@@ -1,11 +1,14 @@
 import {Component} from '@angular/core';
+import {LevelService} from './level.service.js';
 
 @Component({
   selector: 'fountain-app',
-  template: require('./cv.html')
+  template: require('./cv.html'),
+  host: {'(window:scroll)': 'track($event)'}
 })
 export class CVComponent {
-  constructor() {
+  constructor(levels: LevelService) {
+    this.levels = levels;
     this.workExperience = [
       {
         name: "Futurice",
@@ -34,23 +37,6 @@ export class CVComponent {
       }
     ];
 
-    this.education = [
-      {
-        name: "Degree Program in Information Studies and Interactive Media",
-        school: "University of Tampere",
-        time: "2013 – ",
-        desc: "Interactive media, game studies, Internet, social media, information science. Minor studies: information technology, programming, project management, user interface design, Japanese language.<br/><br/>One year of exchange studies in Daito Bunka University, <strong>Tokyo, Japan</strong>.",
-        img: "/img/tampereuniversity.png"
-      },
-      {
-        name: "Vocational Qualification in Business Information Technology",
-        school: "Oulu Vocational College",
-        time: "2009 – 2012",
-        desc: "Studies oriented in game programming. Game design and development, web development, databases, 3d modeling, information processing, customer service, business administration, accounting, project management. <br>Dual qualification in Oulu High School for Adults.",
-        img: "/img/osao.png"
-      }
-    ];
-
     this.techSkills = [
       "HTML5", "JavaScript", "PHP", "ActionScript", "Silverlight",
       "C++", "C#", "Java", "C",
@@ -69,5 +55,39 @@ export class CVComponent {
       {language: "Swedish", level: "Basics, studies in 2006 - 2010, 2014"},
       {language: "German", level: "Basics, studied in 2004 - 2009"}
     ];
+  }
+
+  solution = ["Heroku", "Angular", "SASS", "Silverlight", "Unity", "Grunt", "Adobe Photoshop", "MongoDB"];
+  secretProgress = 0;
+  skillSecret(skill) {
+    if (skill === this.solution[this.secretProgress]) {
+      if (this.secretProgress === this.solution.length - 1) {
+        this.levels.triggerChallenge("techSkillSecret");
+      } else {
+        this.secretProgress++;
+      }
+    }
+  }
+
+  tripToJapan() {
+    this.levels.triggerChallenge("tripToJapan");
+  }
+  dualWield() {
+    this.levels.triggerChallenge("dualWield");
+  }
+
+  nextSkillSecret(skill) {
+    return this.secretProgress !== 0 && skill === this.solution[this.secretProgress];
+  }
+
+  track($event) {
+    const body = document.body;
+    const windowHeight = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
+    const html = document.documentElement;
+    const docHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+    const windowBottom = windowHeight + window.pageYOffset;
+    if (windowBottom >= docHeight) {
+      this.levels.triggerChallenge("bottomOfCV");
+    }
   }
 }

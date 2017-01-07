@@ -11,6 +11,9 @@ import {AboutMeComponent} from './about';
 import {PortfolioComponent} from './portfolio';
 import {ArtifactComponent} from './pages/artifact';
 import {SitefolkComponent} from './pages/sitefolk';
+import {LevelComponent} from './levelComponent.js';
+
+import {LevelService} from './level.service.js';
 
 @NgModule({
   imports: [
@@ -27,8 +30,10 @@ import {SitefolkComponent} from './pages/sitefolk';
     PortfolioComponent,
     AboutMeComponent,
     ArtifactComponent,
-    SitefolkComponent
+    SitefolkComponent,
+    LevelComponent
   ],
-  bootstrap: [RootComponent]
+  bootstrap: [RootComponent],
+  providers: [LevelService]
 })
 export class AppModule {}

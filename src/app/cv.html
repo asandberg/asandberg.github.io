@@ -9,17 +9,28 @@
     </div>
   </div>
   <h2 class="underlined">Education</h2>
-  <div *ngFor="let edu of education" class="cv-item">
-    <div><img [src]="edu.img" class="cv-image"/></div>
+  <div class="cv-item">
+    <div><img src="/img/tampereuniversity.png" class="cv-image"/></div>
     <div>
-      <h3>{{edu.name}}</h3>
-      <p>{{edu.school}}</p>
-      <p>{{edu.time}}</p>
-      <p [innerHTML]="edu.desc"></p>
+      <h3>Degree Program in Information Studies and Interactive Media</h3>
+      <p>University of Tampere</p>
+      <p>2013 – </p>
+      <p>Studies heavily focused on game research. Interactive media, game studies, Internet, social media, information science. Minor studies: information technology, programming, project management, user interface design, Japanese language.</p>
+      <p (click)="tripToJapan()">One year of exchange studies in Daito Bunka University, <strong>Tokyo, Japan</strong>.</p>
+    </div>
+  </div>
+  <div class="cv-item">
+    <div><img src="/img/osao.png" class="cv-image"/></div>
+    <div>
+      <h3>Vocational Qualification in Business Information Technology</h3>
+      <p>Oulu Vocational College</p>
+      <p>2009 – 2012</p>
+      <p>Studies oriented in game programming. Game design and development, web development, databases, 3d modeling, information processing, customer service, business administration, accounting, project management.</p>
+      <p (click)="dualWield()">Dual qualification in Oulu High School for Adults.</p>
     </div>
   </div>
   <h2 class="underlined">Technology skills</h2>
-  <p><span class="tech-skill" *ngFor="let skill of techSkills">{{skill}} </span></p>
+  <p><span class="tech-skill" *ngFor="let skill of techSkills" [ngClass]="{'next-skill': nextSkillSecret(skill)}" (click)="skillSecret(skill)">{{skill}} </span></p>
 
   <h2 class="underlined">Languages</h2>
   <p class="language" *ngFor="let language of languages">

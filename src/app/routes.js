@@ -8,9 +8,19 @@ import {SitefolkComponent} from './pages/sitefolk';
 
 @Component({
   selector: 'sandberg-root',
-  template: require('./base.html')
+  template: require('./base.html'),
+  host: {'(window:scroll)': 'track($event)'}
 })
-export class RootComponent {}
+export class RootComponent {
+  onActivate($event, outlet) {
+    document.body.scrollTop = 0;
+  }
+
+  track($event) {
+    this.titleImageScroll = `0 ${Math.min(window.pageYOffset / 1.5, 200)}px`;
+  }
+  titleImageScroll = 0;
+}
 
 export const routes = [
   {

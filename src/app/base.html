@@ -1,16 +1,12 @@
 <sandberg-header></sandberg-header>
-<div id="title" style="background-image:url(/img/mountains.png)">
+<div id="title" style="background-image:url(/img/mountains.png)" [style.background-position]="titleImageScroll">
   <h1>Antti Sandberg</h1>
   <h2>designer - developer</h2>
 </div>
   <main class="main">
-    <!-- <div id="sidebar">
-      <img src="/img/self.png" id="profile">
-      <h2>Hello!</h2>
-      <p>I'm Antti Sandberg, game developern  </p>
-    </div> -->
     <div id="content">
-      <router-outlet></router-outlet>
+      <router-outlet (activate)="onActivate($event, outlet)"></router-outlet>
     </div>
   </main>
+  <level-info></level-info>
 <sandberg-footer></sandberg-footer>
