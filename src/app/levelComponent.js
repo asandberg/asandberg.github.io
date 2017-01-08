@@ -8,7 +8,7 @@ import {LevelService} from './level.service.js';
       <div class="level-guide" *ngIf="showGuide">
         <div class="arrow"></div>
         <h3>Clear challenges and reach the max level!</h3>
-        <p>Explore the website </p>
+        <p>Clear following challenges by exploring the website and, for example, clicking on certain objects. Can you solve them all?</p>
         <p>Challenges:</p>
         <div *ngFor="let challenge of getChallengeDescriptions()" class="challenge-description" [ngClass]="{'completed':challenge.completed}">{{challenge.completed ? '☑' : '☐'}} {{challenge.description}}</div>
       </div>

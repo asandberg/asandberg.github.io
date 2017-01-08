@@ -19,7 +19,7 @@ export class LevelService {
     bottomOfPortfolio: {exp: 4, description: "Browse through the portfolio!", stats: [{label: "Scrolling skill", value: "+2"}]},
     stayOnPage: {exp: 6, description: "Just a moment.", stats: [{label: "Productivity", value: "-1"}]},
     techSkillSecret: {exp: 6, description: "Hero's secret technology.", stats: [{label: "Puzzle solving skills", value: "+3"}, {label: "Efficiency", value: "-1"}]},
-    tripToJapan: {exp: 2, description: "The Rising Sun.", stats: [{label: "Adventurer", value: "+1"}, {label: "Kawaii", value: "1"}]},
+    tripToJapan: {exp: 2, description: "The Rising Sun.", stats: [{label: "Adventurer", value: "+1"}, {label: "Kawaii", value: "+1"}]},
     dualWield: {exp: 2, description: "Dual wielding swords.", stats: [{label: "Attack", value: "+1"}, {label: "Clumsiness", value: "+1"}]},
     webPortfolio: {exp: 3, description: "Portfolio of web.", stats: [{label: "Coffee consumption", value: "+1"}]},
     gamePortfolio: {exp: 3, description: "Portfolio of games.", stats: [{label: "Passion", value: "+1"}]},

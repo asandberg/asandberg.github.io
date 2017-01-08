@@ -66,11 +66,13 @@ header a {
   background-color: hsl(217, 75%, 10%);
   background-repeat: repeat-x;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   h1, h2 {
     margin: 0;
     color: white;
-    position: absolute;
     width: 100%;
     text-align: center;
     font-family: Calibri;
@@ -371,6 +373,14 @@ header a {
   }
 }
 
+.basic-info {
+  display: flex;
+  justify-content: space-between;
+  span:last-child {
+    text-align: right;
+  }
+}
+
 .stat-notification {
   background-color: rgba(0,0,0,0.65);
   color: white;
@@ -454,6 +464,31 @@ header a {
 }
 
 @media (max-width: $mobileWidth) {
+  #title h1 {
+    font-size: 3em;
+  }
+  .header {
+    position: relative;
+  }
+  #level {
+    width: calc(100% - 70px);
+    .challenge-cleared {
+      width: calc(100% - 40px);
+      font-size: 1.3em;
+    }
+    .stat-notification {
+      width: calc(100% - 40px);
+    }
+  }
+  .cv-item {
+    flex-direction: column;
+  }
+  .basic-info {
+    flex-direction: column;
+    span:last-child {
+      text-align: left;
+    }
+  }
   .portfolio-item {
     flex-direction: column;
 
