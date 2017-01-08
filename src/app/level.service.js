@@ -76,7 +76,7 @@ export class LevelService {
   }
 
   getData() {
-    const data = null; // JSON.parse(localStorage.getItem(this.dataIndex));
+    const data = JSON.parse(localStorage.getItem(this.dataIndex));
     if (data === null) {
       this.currentLevel = 0;
       this.currentExp = 0;
