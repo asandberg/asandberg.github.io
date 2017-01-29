@@ -14,7 +14,7 @@ export class PortfolioComponent {
         img: "/img/frozenforce.png",
         name: "Frozen Force",
         link: "http://frozenforce.herokuapp.com/#/",
-        description: "A website made with Angular, Node.js and Heroku in 2014 for a small Finnish game community I'm part of. I was the only developer of the site and thus responsible of the design, graphics, and both server and client side code."
+        description: "A website made with Angular, Node.js, MongoDB, and Heroku in 2014 for a small Finnish game community I'm part of. I was the only developer of the site and thus responsible of the design, graphics, and both server and client side code."
       },
       {
         img: "/img/solar.png",

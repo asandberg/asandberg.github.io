@@ -62,7 +62,7 @@ header a {
   height: 250px;
   text-align: center;
 //  background-image: url("img/mountains.png");
-  background-size: contain;
+  background-size: auto 100%;
   background-color: hsl(217, 75%, 10%);
   background-repeat: repeat-x;
   position: relative;
@@ -455,6 +455,10 @@ header a {
   }
 }
 
+.full-width {
+  width: 100%;
+}
+
 @media (max-width: $compactWidth) {
   #sidebar { display: none; }
   #content { width: 100%; }
@@ -463,7 +467,10 @@ header a {
 
 @media (max-width: $mobileWidth) {
   #title h1 {
-    font-size: 3em;
+    font-size: 2em;
+  }
+  #title h2 {
+    font-size: 1.2em;
   }
   .header {
     position: relative;

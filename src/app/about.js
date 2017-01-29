@@ -8,21 +8,12 @@ import {LevelService} from './level.service.js';
 })
 export class AboutMeComponent {
 
-  gainedStats : any[] = [];
-
   constructor(levels : LevelService) {
     this.levels = levels;
-    this.gainedStats.push({value: "-1", label: "Productivity"});
-    this.gainedStats.push({value: "+2", label: "Coordination"});
-    this.gainedStats.push({value: "±0", label: "Knowledge"});
-    this.gainedStats.push({value: "+1", label: "Networking"});
   }
 
-  asd() {
+  triggerAvatarChallenge() {
     this.levels.triggerChallenge("clickTheAvatar");
-  }
-  asd2() {
-    this.levels.triggerChallenge("openCV");
   }
 
   track($event) {
