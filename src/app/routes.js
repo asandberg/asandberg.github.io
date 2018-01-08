@@ -5,6 +5,7 @@ import {PortfolioComponent} from './portfolio';
 import {AboutMeComponent} from './about';
 import {ArtifactComponent} from './pages/artifact';
 import {SitefolkComponent} from './pages/sitefolk';
+import {MushroomPrincessComponent} from './pages/mushroomprincess';
 
 @Component({
   selector: 'sandberg-root',
@@ -38,6 +39,10 @@ export const routes = [
   {
     path: 'artifact',
     component: ArtifactComponent
+  },
+  {
+    path: 'mushroom-princess',
+    component: MushroomPrincessComponent
   },
   {
     path: 'sitefolk',

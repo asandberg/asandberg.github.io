@@ -78,14 +78,9 @@
         "error",
         "windows"
       ],
-      "no-unused-vars": [
-        "error",
-        {
-          "vars": "local"
-        }
-      ],
+      "no-unused-vars": "off",
       "no-useless-constructor": "off",
-      "no-unused-vars": "off"
+      "no-mixed-spaces-and-tabs": "off"
     }
   }
 }

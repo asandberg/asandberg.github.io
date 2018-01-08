@@ -11,6 +11,12 @@ export class PortfolioComponent {
   constructor(levels : LevelService) {
     this.portfolio = [
       {
+        img: "/img/mp_screen3.png",
+        name: "Mushroom Princess",
+        routerLink: "mushroom-princess",
+        description: "A puzzle adventure game created during a six week project in Aalto University in 2017. I was working in a team of five, and my main responsibilities were game design, usability and playability design, and programming. The game was created using Unity."
+      },
+      {
         img: "/img/frozenforce.png",
         name: "Frozen Force",
         link: "http://frozenforce.herokuapp.com/#/",

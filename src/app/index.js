@@ -12,6 +12,7 @@ import {PortfolioComponent} from './portfolio';
 import {ArtifactComponent} from './pages/artifact';
 import {SitefolkComponent} from './pages/sitefolk';
 import {LevelComponent} from './levelComponent.js';
+import {MushroomPrincessComponent} from './pages/mushroomprincess';
 
 import {LevelService} from './level.service.js';
 
@@ -31,7 +32,8 @@ import {LevelService} from './level.service.js';
     AboutMeComponent,
     ArtifactComponent,
     SitefolkComponent,
-    LevelComponent
+    LevelComponent,
+    MushroomPrincessComponent
   ],
   bootstrap: [RootComponent],
   providers: [LevelService]

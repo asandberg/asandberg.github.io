@@ -1,0 +1,11 @@
+<div class="text-wrap">
+<h1>Mushroom Princess</h1>
+      <div id="mushroom-image" [style.background-image]="'url(' + image.url + ')'"></div>
+      <div id="thumbnails">
+  		<div class="mushroom-thumbnails">
+          	<img *ngFor="let img of images; let i = index" class="mushroom-thumbnail" [src]="img.url" (click)="setImage(i)" />
+         </div>
+      </div>
+  <p>Mushroom Princess is a puzzle adventure game created in six weeks with a team of five in Aalto University in 2017. My main responsibilities were game design, usability and playability design, and programming. The game was created with Unity.</p>
+  <p>You can download the game <a href="https://drive.google.com/file/d/1djDoUkZitfGFXUnI2LAz7EQRakIIQ3n_/view?usp=sharing">here</a>.</p>
+</div>

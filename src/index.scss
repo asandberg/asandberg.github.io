@@ -28,7 +28,7 @@ h3 {
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 a {
@@ -501,4 +501,26 @@ header a {
 
     .portfolio-item-image, img { width: 100%; }
   }
+}
+
+#mushroom-image {
+  width: 100%;
+  transition: background-image 0.5s;
+  padding-bottom: 56.25%;
+  background-size: cover;
+  background-position: center top;
+}
+
+.mushroom-thumbnails {
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mushroom-thumbnail {
+  max-width: 120px;
+  cursor: pointer;
 }
