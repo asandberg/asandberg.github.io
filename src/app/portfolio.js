@@ -11,7 +11,19 @@ export class PortfolioComponent {
   constructor(levels : LevelService) {
     this.portfolio = [
       {
-        img: "/img/mp_screen3.png",
+        img: "/img/plusminus.png",
+        name: "Plusminus",
+        routerLink: "mushroom-princess",
+        description: "A puzzle adventure game created during a six week project in Aalto University in 2017. I was working in a team of five, and my main responsibilities were game design, usability and playability design, and programming. The game was created using Unity."
+      },
+      {
+        img: "/img/mushroomprincess.png",
+        name: "Mushroom Princess",
+        routerLink: "mushroom-princess",
+        description: "A puzzle adventure game created during a six week project in Aalto University in 2017. I was working in a team of five, and my main responsibilities were game design, usability and playability design, and programming. The game was created using Unity."
+      },
+      {
+        img: "/img/mushroomprincess.png",
         name: "Mushroom Princess",
         routerLink: "mushroom-princess",
         description: "A puzzle adventure game created during a six week project in Aalto University in 2017. I was working in a team of five, and my main responsibilities were game design, usability and playability design, and programming. The game was created using Unity."
@@ -23,16 +35,22 @@ export class PortfolioComponent {
         description: "A website made with Angular, Node.js, MongoDB, and Heroku in 2014 for a small Finnish game community I'm part of. I was the only developer of the site and thus responsible of the design, graphics, and both server and client side code."
       },
       {
-        img: "/img/solar.png",
-        name: "Solar Calamity",
-        link: "http://anttisandberg.com/starsmaker/",
-        description: "A Unity game about the solar system made in a weekend-long game jam, RAY Game Jam 2 in November 2016. I was a programmer, game designer, and graphic artist in our team of three jammers."
-      },
-      {
         img: "/img/artifact.png",
         name: "Artifact",
         routerLink: "artifact",
         description: "A bullet hell game made with C# and Microsoft XNA Game library in 2012 as my graduation work at Oulu Vocational School. I programmed and made the graphics for the project."
+      },
+      {
+        img: "/img/lattyyn.png",
+        name: "Lättyyn",
+        link: "https://globalgamejam.org/2018/games/l%C3%A4ttyyn",
+        description: "A fast-paced competitive multiplayer game where motion controls and floppy physics bring hilarity and hate to the fighting game genre. Made during weekend-long Finnish Game Jam January 2018."
+      },
+      {
+        img: "/img/solar.png",
+        name: "Solar Calamity",
+        link: "http://anttisandberg.com/starsmaker/",
+        description: "A Unity game about the solar system made in a weekend-long game jam, RAY Game Jam 2 in November 2016. I was a programmer, game designer, and graphic artist in our team of three jammers."
       },
       {
         img: "/img/sitefolk.png",

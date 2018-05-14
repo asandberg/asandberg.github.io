@@ -38,13 +38,13 @@ export class CVComponent {
     ];
 
     this.techSkills = [
-      "HTML5", "JavaScript", "PHP", "ActionScript", "Silverlight",
+      "HTML5", "JavaScript", "PHP", "Silverlight",
       "C++", "C#", "Java", "C",
       "JQuery", "Angular", "SASS",
       "Yeoman", "Grunt", "Gulp",
       "WordPress", "Heroku", "Node.js", "Android SDK", "MVC frameworks",
       "MySQL", "MongoDB",
-      "Unity", "MS Office", "Adobe Photoshop", "Git"
+      "Unity", "MS Office", "Adobe Photoshop", "Git", "Python", "Matlab"
     ];
     this.techSkills.sort();
 
