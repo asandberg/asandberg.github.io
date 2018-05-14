@@ -13,8 +13,8 @@ export class PortfolioComponent {
       {
         img: "/img/plusminus.png",
         name: "Plusminus",
-        routerLink: "mushroom-princess",
-        description: "A puzzle adventure game created during a six week project in Aalto University in 2017. I was working in a team of five, and my main responsibilities were game design, usability and playability design, and programming. The game was created using Unity."
+        routerLink: "plusminus",
+        description: "An action-puzzle game where you solve puzzles and fight enemies with magnetism. Made in a team of six master level game design students at Aalto University in 2018. My main responsibilities were collaborative game design, level design, game balance, and programming."
       },
       {
         img: "/img/mushroomprincess.png",
