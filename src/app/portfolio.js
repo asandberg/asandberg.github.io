@@ -23,16 +23,22 @@ export class PortfolioComponent {
         description: "A puzzle adventure game created during a six week project in Aalto University in 2017. I was working in a team of five, and my main responsibilities were game design, usability and playability design, and programming. The game was created using Unity."
       },
       {
-        img: "/img/mushroomprincess.png",
-        name: "Mushroom Princess",
-        routerLink: "mushroom-princess",
-        description: "A puzzle adventure game created during a six week project in Aalto University in 2017. I was working in a team of five, and my main responsibilities were game design, usability and playability design, and programming. The game was created using Unity."
-      },
-      {
         img: "/img/frozenforce.png",
         name: "Frozen Force",
         link: "http://frozenforce.herokuapp.com/#/",
         description: "A website made with Angular, Node.js, MongoDB, and Heroku in 2014 for a small Finnish game community I'm part of. I was the only developer of the site and thus responsible of the design, graphics, and both server and client side code."
+      },
+      {
+        img: "/img/sockoff.png",
+        name: "Sockoff!",
+        link: "https://tcmxx.itch.io/sockoff",
+        description: "A local 8-player jam game about socks in a washing machine. Our team had five members, and my main responsibilities were game design and programming. Made in Games Now! Game jam in Spring 2018."
+      },
+      {
+        img: "/img/solar.png",
+        name: "Solar Calamity",
+        link: "http://anttisandberg.com/starsmaker/",
+        description: "A Unity game about the solar system made in a weekend-long game jam, RAY Game Jam 2 in November 2016. I was a programmer, game designer, and graphic artist in our team of three jammers."
       },
       {
         img: "/img/artifact.png",
