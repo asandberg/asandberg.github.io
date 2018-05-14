@@ -11,6 +11,12 @@ export class PortfolioComponent {
   constructor(levels : LevelService) {
     this.portfolio = [
       {
+        img: "/img/plusminus.png",
+        name: "Plusminus",
+        routerLink: "plusminus",
+        description: "An action-puzzle game where you fight enemies and solve puzzles with magnetism. Made in a team of six master-level game design students from Aalto University. My main responsibilities were collaborative game design, level design, game balance, and programming. Made in Spring 2018."
+      },
+      {
         img: "/img/mp_screen3.png",
         name: "Mushroom Princess",
         routerLink: "mushroom-princess",
@@ -21,6 +27,12 @@ export class PortfolioComponent {
         name: "Frozen Force",
         link: "http://frozenforce.herokuapp.com/#/",
         description: "A website made with Angular, Node.js, MongoDB, and Heroku in 2014 for a small Finnish game community I'm part of. I was the only developer of the site and thus responsible of the design, graphics, and both server and client side code."
+      },
+      {
+        img: "/img/sockoff.png",
+        name: "Sockoff!",
+        link: "https://tcmxx.itch.io/sockoff",
+        description: "A local 8-player jam game about socks in a washing machine. Our team had five members, and my main responsibilities were game design and programming. Made in Games Now! Game jam in Spring 2018."
       },
       {
         img: "/img/solar.png",
